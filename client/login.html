@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Unipedia - Login</title>
+
+    <script>
+      const accountName = localStorage.getItem("name");
+      const accountPassword = localStorage.getItem("password");
+
+      function login(name, password) {
+        if (name === accountName && password === accountPassword) {
+          window.location.href = "beranda.html";
+        } else {
+          alert("Invalid name or password. Please try again.");
+        }
+      }
+      console.log("Name:", name);
+      console.log("Password:", password);
+    </script>
+  </head>
+  <body>
+    <section class="flex flex-row items-center justify-center h-screen">
+      <div class="bg-black w-full h-screen max-lg:hidden">
+        <img
+          src="/uasweb1/assets/images/person-reading-book_1281067-111.avif"
+          alt=""
+          class="w-full h-screen"
+        />
+      </div>
+      <div class="flex w-[90%] h-screen justify-center items-center">
+        <div class="w-90 h-100 items-center">
+          <form
+            action=""
+            class="flex flex-col gap-6"
+            onsubmit="login(event.target.name.value, event.target.password.value); event.preventDefault()"
+          >
+            <div class="flex flex-col gap-1 mb-6">
+              <label for="" class="text-3xl font-bold tracking-wide"
+                >Login your account</label
+              >
+              <label
+                for=""
+                class="text-gray-500 text-md font-semibold max-sm:text-sm"
+                >Let's get you started with a 30 days free trial</label
+              >
+            </div>
+
+            <div class="flex flex-col gap-1 mb-6">
+              <label for="" class="font-semibold text-l tracking-wide"
+                >Name</label
+              >
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="w-full h-8 bg-white text-black text-md font-semibold pl-2 border-b-2"
+              />
+            </div>
+            <div class="mb-8">
+              <label for="" class="font-semibold text-l tracking-wide"
+                >Password</label
+              >
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="w-full h-8 bg-white text-black text-md font-semibold pl-2 border-b-2"
+              />
+            </div>
+            <div class="flex flex-col gap-4 mb-6">
+              <button
+                type="submit"
+                class="bg-black text-white h-12 rounded-lg font-bold tracking-wide hover:cursor-pointer"
+              >
+                Login account
+              </button>
+
+              <div
+                class="flex items-center gap-4 justify-center border-1 rounded-lg hover:cursor-pointer"
+              >
+                <span class=""
+                  ><img
+                    src="/uasweb1/assets/images/imgbin-google-logo-computer-icons-google-f3LyqhE32DVpsGHwg7EdhZgSN.jpg"
+                    alt=""
+                    width="20"
+                    height="20" /></span
+                ><button
+                  class="h-12 rounded-lg font-bold tracking-wide hover:cursor-pointer"
+                >
+                  Sign in with google
+                </button>
+              </div>
+
+              <p class="text-gray-500 text-md font-semibold">
+                Don't have an account yet?
+                <a href="signup.html" class="font-bold underline"
+                  >Sign up here</a
+                >
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

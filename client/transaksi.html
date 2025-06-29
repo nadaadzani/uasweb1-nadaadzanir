@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Unipedia - Transaksi</title>
+
+    <script>
+      // console.log(document.getElementById("hamburger-btn"));
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("hamburger-btn")
+          .addEventListener("click", () => {
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.remove("hidden");
+            } else {
+              mobileMenu.classList.add("hidden");
+            }
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Header tag -->
+    <header>
+      <div>
+        <a href="beranda.html">
+          <img
+            src="/uasweb1/assets/logo/education-book-logo-template-vector-illustration-removebg-preview.png"
+            alt=""
+            class="w-24 h-18 ml-6 fixed z-20"
+          />
+        </a>
+      </div>
+
+      <nav
+        class="flex items-center w-screen h-18 fixed z-10 bg-[rgba(0,0,0,0.15)] pl-18"
+      >
+        <div>
+          <a
+            href="beranda.html"
+            class="text-4xl font-extrabold ml-12 bg-clip-text text-transparent bg-gradient-to-r from-[#833AB4] to-[#FCB045] opacity-100 z-20"
+            id="opacity"
+          >
+            Unipedia
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div
+          class="hidden sm:flex justify-between ml-12 text-xl font-semibold text-white w-[72rem]"
+        >
+          <ul class="flex flex-row">
+            <li>
+              <a
+                href="beranda.html"
+                class="p-2 hover:bg-[rgba(0,0,0,0.20)] rounded-lg hover:duration-400 hover:ease-in-out"
+                >Beranda</a
+              >
+            </li>
+            <li class="ml-8">
+              <a
+                href="transaksi.html"
+                class="p-2 hover:bg-[rgba(0,0,0,0.20)] rounded-lg hover:duration-400 hover:ease-in-out"
+                >Transaksi</a
+              >
+            </li>
+          </ul>
+          <ul class="flex flex-row">
+            <li class="ml-8">
+              <a
+                href="profil.html"
+                class="p-2 hover:bg-[rgba(0,0,0,0.20)] rounded-lg hover:transition-all hover:duration-400 hover:ease-in-out"
+                >Profil</a
+              >
+            </li>
+            <li class="ml-8">
+              <a
+                href="login.html"
+                class="p-2 hover:bg-[rgba(0,0,0,0.20)] rounded-lg hover:duration-400 hover:ease-in-out mr-6"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button
+          class="sm:hidden fixed right-6 z-30 hover:cursor-pointer"
+          id="hamburger-btn"
+        >
+          <div class="w-8 h-1 bg-white mb-1.5 transition-all"></div>
+          <div class="w-8 h-1 bg-white mb-1.5 transition-all"></div>
+          <div class="w-8 h-1 bg-white transition-all"></div>
+        </button>
+
+        <!-- Mobile Dropdown Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden fixed top-18 left-0 w-full bg-[rgba(0,0,0,0.80)] z-20 pt-4 pb-6"
+        >
+          <ul
+            class="flex flex-col items-center text-xl font-semibold text-white"
+          >
+            <li class="w-full text-center py-3 border-b border-gray-700">
+              <a href="beranda.html" class="block w-full py-2">Beranda</a>
+            </li>
+            <li class="w-full text-center py-3 border-b border-gray-700">
+              <a href="transaksi.html" class="block w-full py-2">Transaksi</a>
+            </li>
+            <li class="w-full text-center py-3 border-b border-gray-700">
+              <a href="profil.html" class="block w-full py-2">Profil</a>
+            </li>
+            <li class="w-full text-center py-3">
+              <a href="login.html" class="block w-full py-2">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Header tag end -->
+
+    <section class="w-full h-screen pt-24">
+      <!-- <div class="w-48 h-48 bg-gradient-to-r from-[#020024] to-[#00D4FF]"></div> -->
+      <div
+        class="bg-white w-[22rem] h-[35rem] mt-8 rounded-xl border-2 mx-auto max-[370px]:w-[19rem]"
+      >
+        <p
+          class="bg-clip-text text-transparent bg-gradient-to-r from-[#020024] to-[#00D4FF] font-extrabold text-3xl text-center mt-2"
+        >
+          Formulir transaksi
+        </p>
+        <form
+          action="/uasweb1/client/daftarTransaksi.html"
+          class="flex flex-col"
+        >
+          <div class="flex flex-col w-[90%] ml-4 mt-12 gap-2">
+            <label for="" class="text-lg font-bold">Nama Buku</label>
+            <input
+              type="text"
+              name="namabuku"
+              id="namabuku"
+              class="border-2 rounded-lg p-1"
+              required
+            />
+          </div>
+          <div class="flex flex-col w-[90%] ml-4 mt-4 gap-2">
+            <label class="text-lg font-bold"> Buku</label>
+            <input
+              type="text"
+              name="hargabuku"
+              id="hargabuku"
+              class="border-2 rounded-lg p-1"
+              required
+            />
+          </div>
+
+          <div class="flex flex-col w-[90%] ml-4 mt-4 gap-2">
+            <label for="" class="text-lg font-bold">Jumlah Buku</label>
+            <input
+              type="number"
+              name="jumlahbuku"
+              id="jumlahbuku"
+              class="border-2 rounded-lg p-1"
+              required
+            />
+          </div>
+          <div class="flex flex-col w-[90%] ml-4 mt-4 gap-2">
+            <label for="" class="text-lg font-bold">Kategori Buku</label>
+            <input
+              type="text"
+              name="kategoribuku"
+              id="kategoribuku"
+              class="border-2 rounded-lg p-1"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="mt-8 w-36 h-12 bg-black text-white text-xl font-bold rounded-lg mx-auto hover:cursor-pointer flex items-center justify-center"
+          >
+            Simpan
+          </button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

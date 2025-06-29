@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Unipedia - Formulir Transaksi</title>
+
+    <script>
+      // console.log(document.getElementById("hamburger-btn"));
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("hamburger-btn")
+          .addEventListener("click", () => {
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.remove("hidden");
+            } else {
+              mobileMenu.classList.add("hidden");
+            }
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Header tag -->
+    <header>
+      <div>
+        <a href="beranda.html">
+          <img
+            src="/uasweb1/assets/logo/education-book-logo-template-vector-illustration-removebg-preview.png"
+            alt=""
+            class="w-24 h-18 ml-6 fixed z-20"
+          />
+        </a>
+      </div>
+
+      <nav
+        class="flex items-center w-screen h-18 fixed z-10 bg-[rgba(0,0,0,0.15)] pl-18"
+      >
+        <div>
+          <a
+            href="beranda.html"
+            class="text-4xl font-extrabold ml-12 bg-clip-text text-transparent bg-gradient-to-r from-[#833AB4] to-[#FCB045] opacity-100 z-20"
+            id="opacity"
+          >
+            Unipedia
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div
+          class="hidden sm:flex justify-between ml-12 text-xl font-semibold text-white w-[72rem]"
+        >
+          <ul class="flex flex-row">
+            <li>
+              <a
+                href="beranda.html"
+                class="p-2 hover:bg-[rgba(0,0,0,0.20)] rounded-lg hover:duration-400 hover:ease-in-out"
+                >Beranda</a
+              >
+            </li>
+            <li class="ml-8">
+              <a
+                href="transaksi.html"
+                class="p-2 hover:bg-[rgba(0,0,0,0.20)] rounded-lg hover:duration-400 hover:ease-in-out"
+                >Transaksi</a
+              >
+            </li>
+          </ul>
+          <ul class="flex flex-row">
+            <li class="ml-8">
+              <a
+                href="profil.html"
+                class="p-2 hover:bg-[rgba(0,0,0,0.20)] rounded-lg hover:transition-all hover:duration-400 hover:ease-in-out"
+                >Profil</a
+              >
+            </li>
+            <li class="ml-8">
+              <a
+                href="login.html"
+                class="p-2 hover:bg-[rgba(0,0,0,0.20)] rounded-lg hover:duration-400 hover:ease-in-out mr-6"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button
+          class="sm:hidden fixed right-6 z-30 hover:cursor-pointer"
+          id="hamburger-btn"
+        >
+          <div class="w-8 h-1 bg-white mb-1.5 transition-all"></div>
+          <div class="w-8 h-1 bg-white mb-1.5 transition-all"></div>
+          <div class="w-8 h-1 bg-white transition-all"></div>
+        </button>
+
+        <!-- Mobile Dropdown Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden fixed top-18 left-0 w-full bg-[rgba(0,0,0,0.80)] z-20 pt-4 pb-6"
+        >
+          <ul
+            class="flex flex-col items-center text-xl font-semibold text-white"
+          >
+            <li class="w-full text-center py-3 border-b border-gray-700">
+              <a href="beranda.html" class="block w-full py-2">Beranda</a>
+            </li>
+            <li class="w-full text-center py-3 border-b border-gray-700">
+              <a href="transaksi.html" class="block w-full py-2">Transaksi</a>
+            </li>
+            <li class="w-full text-center py-3 border-b border-gray-700">
+              <a href="profil.html" class="block w-full py-2">Profil</a>
+            </li>
+            <li class="w-full text-center py-3">
+              <a href="login.html" class="block w-full py-2">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Header tag end -->
+    <p class="pt-24 text-4xl font-extrabold text-center">Daftar transaksi</p>
+    <section class="mt-4 px-4 sm:px-8">
+      <div class="overflow-x-auto">
+        <table class="w-full min-w-[600px] border-collapse border shadow-sm">
+          <thead class="bg-gray-100">
+            <tr>
+              <th
+                class="px-3 py-3 text-left text-sm font-semibold sm:px-4 sm:py-3"
+              >
+                No
+              </th>
+              <th
+                class="px-3 py-3 text-left text-sm font-semibold sm:px-4 sm:py-3"
+              >
+                Nama Transaksi
+              </th>
+              <th
+                class="px-3 py-3 text-left text-sm font-semibold sm:px-4 sm:py-3"
+              >
+                Harga
+              </th>
+              <th
+                class="px-3 py-3 text-left text-sm font-semibold sm:px-4 sm:py-3"
+              >
+                Jumlah
+              </th>
+              <th
+                class="px-3 py-3 text-left text-sm font-semibold sm:px-4 sm:py-3"
+              >
+                Kategori buku
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr>
+              <td class="px-3 py-3 text-sm sm:px-4 sm:py-3">1</td>
+              <td class="px-3 py-3 text-sm sm:px-4 sm:py-3">Buku Matematika</td>
+              <td class="px-3 py-3 text-sm sm:px-4 sm:py-3">Rp 50.000</td>
+              <td class="px-3 py-3 text-sm sm:px-4 sm:py-3">2</td>
+              <td class="px-3 py-3 text-sm sm:px-4 sm:py-3">Matematika</td>
+            </tr>
+            <tr>
+              <td class="px-3 py-3 text-sm sm:px-4 sm:py-3">2</td>
+              <td class="px-3 py-3 text-sm sm:px-4 sm:py-3">
+                Buku Struktur Data
+              </td>
+              <td class="px-3 py-3 text-sm sm:px-4 sm:py-3">Rp 80.000</td>
+              <td class="px-3 py-3 text-sm sm:px-4 sm:py-3">1</td>
+              <td class="px-3 py-3 text-sm sm:px-4 sm:py-3">
+                Teknologi Informasi
+              </td>
+            </tr>
+            <tr>
+              <td class="px-3 py-3 text-sm sm:px-4 sm:py-3">3</td>
+              <td class="px-3 py-3 text-sm sm:px-4 sm:py-3">
+                Buku Sistem Informasi
+              </td>
+              <td class="px-3 py-3 text-sm sm:px-4 sm:py-3">Rp 300.000</td>
+              <td class="px-3 py-3 text-sm sm:px-4 sm:py-3">4</td>
+              <td class="px-3 py-3 text-sm sm:px-4 sm:py-3">
+                Teknologi Informasi
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="w-full py-8 flex justify-center">
+        <a
+          href="transaksi.html"
+          class="w-48 h-12 rounded-lg flex items-center justify-center bg-black text-white font-bold hover:bg-gray-800 transition-colors"
+        >
+          Tambahkan buku
+        </a>
+      </div>
+    </section>
+  </body>
+</html>

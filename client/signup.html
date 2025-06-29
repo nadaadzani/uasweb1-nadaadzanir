@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Custom google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Unipedia - Sign up</title>
+
+    <script>
+      function signUp(name, password) {
+        if (
+          name === localStorage.getItem("name") &&
+          password === localStorage.getItem("password")
+        ) {
+          alert("Name already exists. Please choose a different name.");
+          return;
+        }
+        localStorage.setItem("name", name);
+        localStorage.setItem("password", password);
+
+        window.location.href = "login.html";
+      }
+    </script>
+  </head>
+  <body>
+    <section class="flex flex-row items-center justify-center h-screen">
+      <div class="bg-black w-full h-screen max-lg:hidden">
+        <img
+          src="/uasweb1/assets/images/person-reading-book_1281067-111.avif"
+          alt=""
+          class="w-full h-screen"
+        />
+      </div>
+      <div class="flex w-[90%] h-screen justify-center items-center">
+        <div class="w-90 h-100 items-center">
+          <form
+            action=""
+            class="flex flex-col gap-6"
+            onsubmit="signUp(event.target.name.value, event.target.password.value); event.preventDefault();"
+          >
+            <div class="flex flex-col gap-1 mb-6">
+              <label
+                for=""
+                class="text-3xl font-bold tracking-wide max-sm:text-2xl"
+                >Sign up your account</label
+              >
+              <label
+                for=""
+                class="text-gray-500 text-md font-semibold max-sm:text-sm"
+                >Let's get you started with a 30 days free trial</label
+              >
+            </div>
+
+            <div class="flex flex-col gap-1 mb-6">
+              <label for="" class="font-semibold text-l tracking-wide"
+                >Name</label
+              >
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="w-full h-8 bg-white text-black text-md font-semibold pl-2 border-b-2"
+                required
+              />
+            </div>
+            <div class="mb-8">
+              <label for="" class="font-semibold text-l tracking-wide"
+                >Password</label
+              >
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="w-full h-8 bg-white text-black text-md font-semibold pl-2 border-b-2"
+                required
+              />
+            </div>
+            <div class="flex flex-col gap-4 mb-6">
+              <button
+                type="submit"
+                class="bg-black text-white h-12 rounded-lg font-bold tracking-wide hover:cursor-pointer"
+              >
+                Sign up account
+              </button>
+
+              <div
+                class="flex items-center gap-4 justify-center border-1 rounded-lg hover:cursor-pointer"
+              >
+                <span class=""
+                  ><img
+                    src="/uasweb1/assets/images/imgbin-google-logo-computer-icons-google-f3LyqhE32DVpsGHwg7EdhZgSN.jpg"
+                    alt=""
+                    width="20"
+                    height="20" /></span
+                ><button
+                  class="h-12 rounded-lg font-bold tracking-wide hover:cursor-pointer"
+                  type="submit"
+                >
+                  Sign in with google
+                </button>
+              </div>
+
+              <p class="text-gray-500 text-md font-semibold">
+                Already have an account?
+                <a href="login.html" class="underline font-bold">Login here</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

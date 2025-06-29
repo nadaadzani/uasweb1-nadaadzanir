@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Unipedia</title>
+
+    <script>
+      // console.log(document.getElementById("hamburger-btn"));
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("hamburger-btn")
+          .addEventListener("click", () => {
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.remove("hidden");
+            } else {
+              mobileMenu.classList.add("hidden");
+            }
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Header tag -->
+    <header>
+      <div>
+        <a href="beranda.html">
+          <img
+            src="/uasweb1/assets/logo/education-book-logo-template-vector-illustration-removebg-preview.png"
+            alt=""
+            class="w-24 h-18 ml-6 fixed z-20"
+          />
+        </a>
+      </div>
+
+      <nav
+        class="flex items-center w-screen h-18 fixed z-10 bg-[rgba(0,0,0,0.40)] pl-18"
+      >
+        <div>
+          <a
+            href="beranda.html"
+            class="text-4xl font-extrabold ml-12 bg-clip-text text-transparent bg-gradient-to-r from-[#833AB4] to-[#FCB045] opacity-100 z-20"
+            id="opacity"
+          >
+            Unipedia
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div
+          class="hidden md:flex justify-between ml-12 text-xl font-semibold text-white w-[72rem]"
+        >
+          <ul class="flex flex-row">
+            <li>
+              <a
+                href="beranda.html"
+                class="p-2 hover:bg-[rgba(0,0,0,0.20)] rounded-lg hover:duration-400 hover:ease-in-out"
+                >Beranda</a
+              >
+            </li>
+            <li class="ml-8">
+              <a
+                href="transaksi.html"
+                class="p-2 hover:bg-[rgba(0,0,0,0.20)] rounded-lg hover:duration-400 hover:ease-in-out"
+                >Transaksi</a
+              >
+            </li>
+          </ul>
+          <ul class="flex flex-row">
+            <li class="ml-8">
+              <a
+                href="profil.html"
+                class="p-2 hover:bg-[rgba(0,0,0,0.20)] rounded-lg hover:transition-all hover:duration-400 hover:ease-in-out"
+                >Profil</a
+              >
+            </li>
+            <li class="ml-8">
+              <a
+                href="login.html"
+                class="p-2 hover:bg-[rgba(0,0,0,0.20)] rounded-lg hover:duration-400 hover:ease-in-out mr-6"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button
+          class="md:hidden fixed right-6 z-30 hover:cursor-pointer"
+          id="hamburger-btn"
+        >
+          <div class="w-8 h-1 bg-white mb-1.5 transition-all"></div>
+          <div class="w-8 h-1 bg-white mb-1.5 transition-all"></div>
+          <div class="w-8 h-1 bg-white transition-all"></div>
+        </button>
+
+        <!-- Mobile Dropdown Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden fixed top-18 left-0 w-full bg-[rgba(0,0,0,0.80)] z-20 pt-4 pb-6"
+        >
+          <ul
+            class="flex flex-col items-center text-xl font-semibold text-white"
+          >
+            <li class="w-full text-center py-3 border-b border-gray-700">
+              <a href="beranda.html" class="block w-full py-2">Beranda</a>
+            </li>
+            <li class="w-full text-center py-3 border-b border-gray-700">
+              <a href="transaksi.html" class="block w-full py-2">Transaksi</a>
+            </li>
+            <li class="w-full text-center py-3 border-b border-gray-700">
+              <a href="profil.html" class="block w-full py-2">Profil</a>
+            </li>
+            <li class="w-full text-center py-3">
+              <a href="login.html" class="block w-full py-2">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Header tag end -->
+
+    <!-- Header tag -->
+    <!-- <header>
+      <div>
+        <a href="beranda.html">
+          <img
+            src="/uasweb1/assets/logo/education-book-logo-template-vector-illustration-removebg-preview.png"
+            alt=""
+            class="w-24 h-18 ml-6 fixed z-2"
+          />
+        </a>
+      </div>
+      <nav
+        class="flex items-center w-screen h-18 fixed z-1 bg-[rgba(0,0,0,0.40)] pl-18"
+      >
+        <div>
+          <a
+            href="beranda.html"
+            class="text-4xl font-extrabold ml-12 bg-clip-text text-transparent bg-gradient-to-r from-[#833AB4] to-[#FCB045] opacity-100 z-2"
+            id="opacity"
+          >
+            Unipedia</a
+          >
+        </div> -->
+    <!-- List tag -->
+    <!-- <div
+          class="flex justify-between ml-12 text-xl font-semibold text-white w-[72rem]"
+        >
+          <ul class="flex flex-row">
+            <li>
+              <a
+                href="beranda.html"
+                class="p-2 hover:bg-[rgba(0,0,0,0.20)] rounded-lg hover:duration-400 hover:ease-in-out"
+                >Beranda</a
+              >
+            </li>
+            <li class="ml-8">
+              <a
+                href="transaksi.html"
+                class="p-2 hover:bg-[rgba(0,0,0,0.20)] rounded-lg hover:duration-400 hover:ease-in-out"
+                >Transaksi</a
+              >
+            </li>
+          </ul>
+          <ul class="flex flex-row">
+            <li class="ml-8">
+              <a
+                href="profil.html"
+                class="p-2 hover:bg-[rgba(0,0,0,0.20)] rounded-lg hover:transition-all hover:duration-400 hover:ease-in-out"
+                >Profil</a
+              >
+            </li>
+            <li class="ml-8">
+              <a
+                href="login.html"
+                class="p-2 hover:bg-[rgba(0,0,0,0.20)] rounded-lg hover:duration-400 hover:ease-in-out"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header> -->
+    <!-- End header tag -->
+    <img
+      src="/uasweb1/assets/images/Arch2O-cambridge-public-library-william-rawn-associates-and-ann-beha-architects-5-2400x1600.jpg"
+      alt=""
+      class="fixed w-full h-full"
+    />
+    <div class="bg-black opacity-55 fixed w-full h-full"></div>
+    <p
+      class="pt-24 text-5xl font-extrabold tracking-wide justify-center text-center absolute text-white w-full max-sm:text-2xl"
+    >
+      Welcome to
+      <span
+        class="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#833AB4] to-[#FCB045] opacity-100 z-2 max-sm:text-2xl"
+        id="opacity"
+        >Unipedia</span
+      >.
+    </p>
+    <p
+      class="pt-44 text-4xl font-extrabold tracking-wide justify-center absolute text-white w-full justify-center text-center max-sm:text-xl max-sm:pt-34"
+    >
+      Where your reading journey starts now.
+    </p>
+    <input
+      type="text"
+      name=""
+      id=""
+      class="relative w-[15rem] h-8 rounded-lg bg-white text-black text-sm font-semibold mt-16 max-sm:mt-50 mx-[27%] max-[560px]:mx-[23%] max-[400px]:mx-[18%] max-[639px]:mx-[25%] px-4 sm:hidden"
+      placeholder="Search books, authors, or topics..."
+    />
+    <input
+      type="text"
+      class="relative w-full max-w-[30rem] h-12 rounded-lg bg-white text-black text-xl font-semibold mt-8 sm:mt-60 max-sm:hidden max-lg:mx-[25%] mx-[33%] px-4"
+      placeholder="Search books, authors, or topics..."
+    />
+  </body>
+</html>
